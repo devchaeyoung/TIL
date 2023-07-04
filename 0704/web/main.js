@@ -1,5 +1,5 @@
 var http = require("http");
-var fs = require("fs");
+var fs = require("fs"); //fs는 파일 시스템의 약자
 var url = require("url");
 
 var app = http.createServer(function (req, res) {
