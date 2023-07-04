@@ -16,3 +16,7 @@ app.listen(8080, function () {
 app.get("/intro", function (req, res) {
   res.send("Hello");
 });
+
+app.get("/list", function (req, res) {
+  res.send("TO DO LIST");
+});
