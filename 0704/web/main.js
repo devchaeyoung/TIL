@@ -13,7 +13,7 @@ var app = http.createServer(function (req, res) {
     return res.writeHead(404);
   }
   res.writeHead(200);
-  res.end(fs.readFileSync(__dirname + _url));
+  res.end(queryData.id); //쿼리스트링에 따라서 다른 정보를 출력하기
 });
 
 app.listen(3000);
