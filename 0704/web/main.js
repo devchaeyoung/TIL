@@ -6,7 +6,6 @@ var app = http.createServer(function (req, res) {
   var _url = req.url;
   var queryData = url.parse(_url, true).query;
   var title = queryData.id;
-  console.log(template);
   if (_url == "/") {
     title = "Welcome";
   }
@@ -34,8 +33,8 @@ var app = http.createServer(function (req, res) {
     <p>${description}</p>
   </body>
   </html>`;
+    res.end(template);
   });
-  res.end(template);
 });
 
 app.listen(3000);
