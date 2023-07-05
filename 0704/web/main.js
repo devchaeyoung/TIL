@@ -14,6 +14,11 @@ var app = http.createServer(function (req, res) {
     return res.writeHead(404);
   }
   res.writeHead(200);
+
+  fs.readFile(`data/${queryData.id}`, `utf8`, function (err, data) {
+    var description = data;
+  });
+
   var template = `
   <!doctype html>
 <html>
